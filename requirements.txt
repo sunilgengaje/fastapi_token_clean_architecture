@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+pydantic>=2.7
+pydantic-settings>=2.2
+python-jose[cryptography]
+passlib
+python-multipart
+email-validator
