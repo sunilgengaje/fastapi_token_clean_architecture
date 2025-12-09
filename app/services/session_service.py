@@ -6,8 +6,8 @@ from app.models.logs import UserSession
 
 def create_session(db: Session, user_id: int, ip: str, user_agent: str) -> str:
     session_id = uuid.uuid4().hex
-    session = UserSession(id=session_id, user_id=user_id, ip=ip, user_agent=user_agent)
-    db.add(session)
+    sess = UserSession(id=session_id, user_id=user_id, ip=ip, user_agent=user_agent)
+    db.add(sess)
     db.commit()
     return session_id
 

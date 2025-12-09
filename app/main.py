@@ -2,18 +2,19 @@
 from fastapi import FastAPI
 
 from app.database import Base, engine
-# import models so they register with Base (ensure logs imported)
+# import model modules so they register with Base
 from app.models.user import User  # noqa: F401
 from app.models.item import Item  # noqa: F401
-from app.models import logs  # noqa: F401
+from app.models import logs  # noqa: F401  (ensures UserSession & AccessLog are registered)
+
 from app.routers.auth_router import router as auth_router
 from app.routers.item_router import router as item_router
 
-# Create tables (for demo; use Alembic in real apps)
+# Create tables (dev only; use Alembic in production)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="Clean Architecture JWT Demo",
+    title="Clean Architecture JWT Demo - with logging",
     docs_url="/docs",
     redoc_url=None,
     openapi_url="/openapi.json",
