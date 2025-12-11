@@ -1,6 +1,7 @@
 # app/config.py
 from pydantic_settings import BaseSettings
 from pydantic import Field
+from typing import Optional
 
 
 class Settings(BaseSettings):
@@ -21,9 +22,16 @@ class Settings(BaseSettings):
         env="ACCESS_TOKEN_EXPIRE_MINUTES"
     )
 
+    # NEW → AES 256-bit key (base64 encoded)
+    AESGCM_KEY: Optional[str] = Field(
+        default=None,
+        env="AESGCM_KEY"
+    )
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
 
 
-settings = Settings()   # <-- THIS MUST EXIST
+# must exist
+settings = Settings()

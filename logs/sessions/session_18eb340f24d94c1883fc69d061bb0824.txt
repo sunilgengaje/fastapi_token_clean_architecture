@@ -1,0 +1,8 @@
+[2025-12-10T12:09:21.928582] user=sunil user_id=2 method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:09:22.004273] user=sunil user_id=2 method=GET path=/favicon.ico status=404 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:09:25.420171] user=sunil user_id=2 method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:09:25.581246] user=sunil user_id=2 method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:17:07.236070] user=sunil user_id=2 method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:17:10.262722] user=sunil user_id=2 method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:17:10.409530] user=sunil user_id=2 method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T12:40:41.162396] user=sunil user_id=2 method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36

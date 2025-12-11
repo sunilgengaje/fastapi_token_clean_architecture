@@ -1,4 +1,3 @@
-# app/routers/item_router.py
 from typing import List
 
 from fastapi import APIRouter, Depends, status

@@ -1,0 +1,6 @@
+[2025-12-10T11:10:11.572587] user=sunil user_id=2 method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T11:10:11.732251] user=sunil user_id=2 method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T11:11:04.431431] user=sunil user_id=2 method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T11:11:09.032301] user=sunil user_id=2 method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T11:11:09.208680] user=sunil user_id=2 method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-10T11:11:26.864844] user=sunil user_id=2 method=POST path=/auth/login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36

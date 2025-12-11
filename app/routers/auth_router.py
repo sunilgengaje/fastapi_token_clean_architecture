@@ -2,6 +2,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Response, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
+from pydantic import BaseModel
+
 from app.schemas.auth import UserCreate, UserRead, Token
 from app.services.auth_service import AuthService
 from app.database import get_db
@@ -10,9 +12,14 @@ from app.utils.logging_utils import append_rotating_log, get_client_ip
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
+
+# -------------------------
+# Existing plain endpoints
+# -------------------------
 @router.post("/register", response_model=UserRead, status_code=status.HTTP_201_CREATED)
 def register(user_in: UserCreate, service: AuthService = Depends(), db: Session = Depends(get_db)):
     return service.register_user(user_in)
+
 
 @router.post("/login", response_model=Token)
 def login(
@@ -44,6 +51,7 @@ def login(
     token = service.create_login_token(user)
     return token
 
+
 @router.post("/logout")
 def logout(request: Request, db: Session = Depends(get_db)):
     session_id = request.cookies.get("session_id")
@@ -59,5 +67,75 @@ def logout(request: Request, db: Session = Depends(get_db)):
 
     from fastapi.responses import JSONResponse
     response = JSONResponse(content={"detail": "logged out"})
+    response.delete_cookie("session_id")
+    return response
+
+
+# -------------------------
+# New secure JSON endpoints
+# -------------------------
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
+@router.post("/secure-login", response_model=Token)
+def secure_login(
+    payload: LoginRequest,
+    request: Request,
+    response: Response,
+    db: Session = Depends(get_db),
+    service: AuthService = Depends(),
+):
+    """
+    JSON login for encrypted clients.
+    When AES middleware is active for /secure/*, the middleware will decrypt the incoming
+    encrypted blob and pass plaintext JSON here so FastAPI will parse LoginRequest.
+    """
+    username = payload.username
+    password = payload.password
+
+    user = service.authenticate_user(username, password)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    # create session & set cookie
+    ip = get_client_ip(request)
+    user_agent = request.headers.get("user-agent", "unknown")
+    session_id = create_session(db=db, user_id=user.id, ip=ip, user_agent=user_agent)
+    response.set_cookie(key="session_id", value=session_id, httponly=True, samesite="lax")
+
+    append_rotating_log(method="POST", path="/auth/secure-login", status=200, ip=ip, ua=user_agent, session_id=session_id, extra=f"user={user.username} user_id={user.id}")
+
+    token = service.create_login_token(user)
+    return token
+
+
+@router.post("/secure-logout")
+def secure_logout(
+    request: Request,
+    db: Session = Depends(get_db),
+):
+    """
+    When AES middleware is active, the cookie is still sent normally via headers.
+    This endpoint simply ends the session and returns JSON (which middleware will encrypt).
+    """
+    session_id = request.cookies.get("session_id")
+    if not session_id:
+        return {"detail": "no session"}
+
+    end_session(db=db, session_id=session_id)
+
+    ip = get_client_ip(request)
+    ua = request.headers.get("user-agent", "unknown")
+    append_rotating_log(method="POST", path="/auth/secure-logout", status=200, ip=ip, ua=ua, session_id=session_id, extra="secure-logout")
+
+    from fastapi.responses import JSONResponse
+    response = JSONResponse(content={"detail": "logged out"})
+    # delete cookie; middleware will still encrypt the JSON body
     response.delete_cookie("session_id")
     return response
