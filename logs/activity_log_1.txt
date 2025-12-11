@@ -106,3 +106,8 @@
 [2025-12-11T07:00:26.760135] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
 [2025-12-11T07:03:29.916171] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
 [2025-12-11T07:04:36.505997] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:11:43.565967] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:15:36.226249] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:16:41.682427] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:19:28.704973] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:20:02.089307] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
