@@ -111,3 +111,26 @@
 [2025-12-11T07:16:41.682427] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
 [2025-12-11T07:19:28.704973] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
 [2025-12-11T07:20:02.089307] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T07:27:10.794601] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T09:03:41.485037] method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=f31b92bb03d94e3cbeb87d88820eda42 extra=user=secureuser user_id=3
+[2025-12-11T09:03:44.644709] method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=f31b92bb03d94e3cbeb87d88820eda42 extra=user=secureuser user_id=3
+[2025-12-11T09:03:44.797831] method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=f31b92bb03d94e3cbeb87d88820eda42 extra=user=secureuser user_id=3
+[2025-12-11T09:05:23.353764] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T09:16:59.745871] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-11T09:58:30.009796] method=POST path=/auth/login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=958f1bdf22434a3cb7f5586604d20f4f extra=user=sunil user_id=2
+[2025-12-11T09:58:30.046434] method=POST path=/auth/login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=f31b92bb03d94e3cbeb87d88820eda42 extra=user=secureuser user_id=3
+[2025-12-11T09:58:56.440540] method=POST path=/auth/secure-login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=4d074225758f4026b94e7b1d41f06f2f extra=user=sunil user_id=2
+[2025-12-11T09:58:56.451547] method=POST path=/auth/secure-login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=958f1bdf22434a3cb7f5586604d20f4f extra=user=sunil user_id=2
+[2025-12-11T09:59:48.780098] method=POST path=/auth/register status=201 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=4d074225758f4026b94e7b1d41f06f2f extra=user=sunil user_id=2
+[2025-12-11T10:02:58.143525] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=4d074225758f4026b94e7b1d41f06f2f extra=user=sunil user_id=2
+[2025-12-15T05:11:35.324434] method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-15T05:11:35.353628] method=GET path=/favicon.ico status=404 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-15T05:11:43.588129] method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-15T05:11:43.987937] method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-15T05:27:11.594232] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-15T05:28:46.653434] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-22T05:22:55.164736] method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-22T05:22:58.383500] method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-22T05:22:58.558088] method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 session=- extra=-
+[2025-12-22T05:29:56.037655] method=POST path=/secure/auth/register status=400 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-
+[2025-12-22T05:31:19.404414] method=POST path=/secure/auth/register status=201 ip=127.0.0.1 ua=python-requests/2.32.5 session=- extra=-

@@ -41,11 +41,12 @@ def decrypt(blob):
 
 if __name__ == "__main__":
     payload = {
-      "username": "secureuser4",
-      "email": "secure4@example.com",
-      "full_name": "Secure User3",
-      "password": "secret123"
-    }
+  "username": "sunilnew12",
+  "email": "sunilnew12@example.com",
+  "full_name": "sunil",
+  "password": "1234"
+}
+
 
     blob = encrypt(payload)
 
@@ -53,6 +54,8 @@ if __name__ == "__main__":
     print("\n=== RAW ENCRYPTED PAYLOAD (FULL) ===")
     print(json.dumps(blob, indent=2))
     print("====================================\n")
+
+
 
     # debug before sending
     print("=== CLIENT DEBUG BEFORE SEND ===")

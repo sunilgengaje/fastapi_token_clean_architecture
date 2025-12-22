@@ -1,1 +1,5 @@
 [2025-12-11T04:54:14.567851] user=secureuser user_id=3 method=POST path=/auth/secure-login status=401 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-11T09:03:41.458422] user=secureuser user_id=3 method=GET path=/ status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-11T09:03:44.634244] user=secureuser user_id=3 method=GET path=/docs status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-11T09:03:44.788082] user=secureuser user_id=3 method=GET path=/openapi.json status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+[2025-12-11T09:58:30.025408] user=secureuser user_id=3 method=POST path=/auth/login status=200 ip=127.0.0.1 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
